@@ -5,18 +5,19 @@
 	<meta charset="utf-8">
 	<title>Hanah Yendler</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="stylesheets/default.css">
 </head>
 <body>
 
-<nav>
-	<div>
-		<h2>Hanah Yendler</h2>
-	</div>
-	<ul>
+<div class="page-wrap">
+
+<nav class="clearfix">
+	<h2 class="nav-header">Hanah Yendler</h2>
+	<ul class="navbar">
 		<li><a href="projects.html">Projects</a></li>
 		<li><a href="experience.html">Experience</a></li>
 		<li><a href="about.html">About</a></li>
-		<li><a href="blog.html">Blog</a></li>
+		<li><a href="blog/blog-template.html">Blog</a></li>
 		<li><a href="dance.html">Dance</a></li>
 		<li><a href="hyendler@gmail.com"><img src="imgs/email_icon.png"></a></li>
 		<li><a href="https://linkedin.com"><img src="imgs/linkedin_icon.png"></a></li>
@@ -24,37 +25,50 @@
 	</ul>
 </nav>
 
+
 <section id="slideshow">
-	<h1>Projects</h1>
-	<div>
-	<!--slideshow of projects-->
+	<img src="imgs/archway_project.png" alt="picture" width="100%" height="100%"> 
+</section>
+
+<div id="content-page-wrap">
+
+<section id="projects" class="clearfix">
+	<div class="img-block">
+		<img src="imgs/streetcode_thumb.jpg">
+		<div class="img-caption">
+		<h3>StreetCode Academy</h3>
+		</div>
+		<p></p>
+	</div>
+	<div class="img-block">
+		<img src="imgs/insat_thumb.jpg">
+		<h3>Website Projects</h3>
+		<p></p>
+	</div>
+	<div class="img-block right-block">
+		<img src="imgs/code_thumb.jpg">
+		<h3>Other Projects</h3>
+		<p></p>
 	</div>
 </section>
 
-<section id="projects">
-	<img src="imgs/">
-	<h3>Project 1</h3>
-	<p></p>
-	<img src="imgs/">
-	<h3>Project 2</h3>
-	<p></p>
-	<img src="imgs/">
-	<h3>Project 3</h3>
-	<p></p>
+<section id="about" class="clearfix">
+	<img src="imgs/profilepic.jpg" alt="profile picture" width="25%" height="25%">
+	<div class="left">
+		<h3>About</h3>
+		<p>I'm a new developer at Devbootcamp, developing damn-tastic dynamite doses of code with my dexterous digits.  I also have an affinity alliterations and a penchant for puns.</p>
+	</div>
+	
 </section>
 
-<section id="about">
-	<img src="imgs/profilepic.jpg">
-	<h3>About</h3>
-	<p>I'm a new developer at Devbootcamp, developing damn-tastic dynamite doses of code with my dexterous digits.  I also have an affinity alliterations and a penchant for puns.</p>
-</section>
+</div><!--close content-page-wrap-->
 
 <footer>
-	<button>
 		<h1>Contact me!</h1>
 		<img src="imgs/email_icon.png">
-	</button>
 </footer>
+
+</div>
 
 
 </body>

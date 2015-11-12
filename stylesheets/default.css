@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script:400,700|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+
+h1, h2, h3, h4, h5, h6, p, li, a {
+	font-family: 'Open Sans';
+}
+.page-wrap, #content-page-wrap {
+	width: 80%;
+	margin: 0px auto;
+}
+
+nav {
+	-webkit-margin-before: 2em;
+    -webkit-margin-after: 2em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.nav-header {
+	text-align: left;
+	float: left;
+	font-family: 'Oleo Script';
+	font-size: 2em;
+}
+
+h2.nav-header, ul.navbar, section#about h3 {
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.navbar {
+	text-align: right;
+	float: right;
+}
+
+ul.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.navbar li {
+	display: inline-block;
+}
+
+.navbar li a {
+	display: block;
+	margin: 0px 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 300;
+	color: grey;
+}
+
+.navbar li a img {
+	width: 25px;
+	height: 25px;
+}
+
+/* slideshow section */
+
+section#slideshow {
+
+	width: 100%;
+	height: 100%;
+}
+
+/* projects section */
+
+#projects img {
+	float: left;
+}
+
+section#projects {
+	margin: 50px 0px;
+}
+
+section#projects .img-block {
+	float: left;
+	text-align: center;
+	margin: 0px auto;
+	padding-right: 50px;
+}
+
+section#projects div.img-block > h3 {
+	margin-top: 30px;
+}
+
+/* ^^having issues with sizing of the h3 on the img blocks - for some reason inheirts the size of 250px and I don't know why.  Want to get just some space between img and  h3 */
+
+section#projects .right-block {
+	padding-right: 0px;
+}
+
+
+/* about section */
+
+section#about {
+	margin: 100px 0px;
+}
+section#about img,
+section#about div {
+	float: left;
+	text-align; left
+}
+
+
+
+section#about div {
+	margin-left: 30px;
+	width: 70%;
+}
+
+/* footer */
+
+footer {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+footer img {
+	width: 50px;
+	height: 50px;
+}
+
+footer h1 {
+	font-family: 'Oleo Script';
+}
+
+
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+
+
+
