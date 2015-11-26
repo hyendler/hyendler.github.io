@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <title>Hanah's Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<div class="container">
+
+<main>
+<div class="blog-post">
+  <h2>It's Just Toast</h2>
+  <h4>How the map method is actually a function/toaster</h4>
+  <h5>11/24/15</h5>
+
+  <section>
+    <p>So let's say you have a function in math.  (Yes, sorry math it is for this explanation - easiest (or laziest) way to explain this concept).  You provide an input to this function, and it spits out some nifty output.  Great!  Or we could even get more metaphorical and call it a toaster.  You put bread into a toaster, something magical happens inside that opaque box, and toast comes out*.
+    </p>
+    <p>In some ways, a method is very much like a function, or a toaster if you will, in that there is an input and an output and something magical happens in the middle.  I would actually argue that the map method is THE most function-like toaster of them all - you give the map method a number, it performs some magical operation, and spits out the magically modified number as a result.  Good thing is though, instead of one or two pieces of toast, you can do as many as you like.  
+    </p>
+    <p>Let's say you have a function where y = x + 2, with the domain D being {1,..,10}.  The function maps x to y, via the addition of 2, which mean there will be a range G of {3,...,13}.  As such, you can totally write this in method form, using map:
+    </p>
+    <pre>
+    (<span class="number">1</span>..<span class="number">10</span>).<span class="method">map</span> { |x| x <span class="symbol">+</span> <span class="number">2</span> }
+    <span class="answer">#=> [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]</span>
+    </pre>
+    <p>So map just transforms one number into another.  Totally a bread to toast situation.
+    </p>
+    <p class="side-note">
+    *I can't take credit for this one, that belongs to Professor Mehran Sahami at Stanford University.
+    </p>
+    <p class="side-note">
+    *Also highly recommend the toaster tongue twister: Have someone say "post", and then spell post, about 7 - 10 times and then ask them what goes into a toaster.  Most people will say toast, even though it's totally bread :P
+    </p>
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+  </div><!--blog post close-->
+</main>
+</div><!-- page wrap close -->
