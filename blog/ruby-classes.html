@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <title>Hanah's Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<div class="container">
+
+<main>
+<div class="blog-post">
+  <h2>You Got Class</h2>
+  <h4>Ruby's Classes</h4>
+  <h5>11/30/15</h5>
+
+  <section>
+    <p>
+      When I first learned about classes, it was a heady concept to wrap my head around.  Classes create objects that have specific methods and variables? <em>Huh?</em> (Let alone the fact that I didn't really grasp what a method or a variable was in the first place.  Or the fact that a method is really just a class-based function.)
+    </p>
+    <p>
+      But I digress!  Classes and objects.  A class is like a template, and objects are the actual occurence/creation of that template.  For example, let's say I wanted to make an RPG crime noir text based Ruby console game.  (Inspiration from Learn Ruby the Hard Way, <a href="http://learnrubythehardway.org/book/ex43.html">Exercise 43</a>.) And let's say I wanted to have a character, a detective.  As such, I could write it like this:
+    </p>
+    <pre>
+      <span class="method">class</span> Detective 
+        <span class="method">def</span> initialize(<span class="attribute">name</span>)
+          @@weapon <span class="symbol">=</span> [<span class="string">"knife"</span>, <span class="string">"gun"</span>, <span class="string">"cigarettes"</span>]
+          @name <span class="symbol">=</span> name
+        <span class="method">end</span>
+
+        <span class="method">def</span> tell_me_about_yourself
+          puts <span class="string">"My name is Detective #{name}, and I fight the crime lords and underlings of this rotten city."</span>
+          puts <span class="string">"I have a #{print_weapon_list}."</span>
+        <span class="method">end</span>
+
+        <span class="method">def</span> add_weapon(<span class="attribute">weapon</span>)
+          @@weapon.<span class="method">push</span>(weapon)
+        end
+
+       <span class="method">def</span> print_weapon_list
+          count <span class="symbol">=</span> <span class="constant">0</span>
+          <span class="method">while</span> count < @@weapon.length <span class="symbol">-</span> <span class="constant">2</span>
+            print @@weapon[<span class="constant">0</span>] <span class="symbol">+</span> <span class="string">", "</span>
+            count <span class="symbol">+=</span> <span class="constant">1</span>
+          <span class="method">end</span>
+          <span class="method">print</span> <span class="string">"and"</span> <span class="symbol">+</span> @@weapon[@weapon.length<span class="symbol">-</span><span class="constant">1</span>]
+        <span class="method">end</span>
+      <span class="method">end</span>
+
+      a_detective = <span class="class">Detective</span>.<span class="method">new</span>(<span class="string">"Detective Bronson"</span>)
+    </pre>
+    <p>
+       So essentially this code is creating a new detective object.  You can pass in a name for your detective character through the initialize method.  The initialize method creates a set of instance variables (variables which can be used across all instances of this particular class, as opposed to a local variable which can be used in a particular method).
+    </p>
+    <p>
+      The detective class comes with a few other fun tricks - you can add weapons to the detective's arsenal through the add_weapon methods, and you can get some info on your detective, through the tell_me_about_yourself method.  That particular method calls another method to help it out with printing the list of weapons the detective currently owns.
+    </p>
+    <p>
+      All in all, classes are fun because they all for more interesting relationships between data and methods.  Meanwhile, I will happily continue sleuthing out better ways to use them!
+    </p>
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+  </div><!--blog post close-->
+</main>
+</div><!-- page wrap close -->
