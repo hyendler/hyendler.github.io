@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+  <title>Hanah's Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<div class="container">
+
+<main>
+<div class="blog-post">
+  <h2>Jiving with Javascript</h2>
+  <h4>Differences in Looping with Javascript and Ruby</h4>
+  <h5>12/11/15</h5>
+
+  <section>
+    <p>
+      I have an admission to make - ever since starting with Ruby, I've been complaining about how I've missed Javascript.  It was more expressive, easier to read, etc, but the biggest thing that I missed was the for loops. 
+    </p>
+    <p>
+      What I loved about Javascript for loops was that one could very easily control the iteration - the iteration step itself could be 1, or 10; how long the loop ran for (length of an array or object or whatever); and the fact that it was a numeric based iteration, not a value based one. You could even loop backwards through a string or an array.
+    </p>
+    <p>
+      Iteration step of 10
+    </p>
+    <pre class="javascript code">
+    for (var i = 0; i < some.length; i += 10) {
+      //do something
+    }
+    </pre>
+    <p>
+      Starting the loop at 1 (instead of at 0.  Not normally encouraged, but can be useful)
+    </p>
+    <pre class="javascript code">
+    for (var i = 1; i < some.length; i++) {
+      //do something
+    }
+    </pre>
+    <p>
+      Aaaaaaaand running the loop backwards through an array!
+    </p>
+    <pre class="javascript code">
+    for (var i = array.length - 1; i > 0; i--) {
+      //do something backwards!
+    }
+    </pre>
+    <p>
+      I was disappointed to learn in Ruby that for loops are discouraged, and on top of that, we had to use the each loop.  While useful, I couldn't start or end where I wanted to and I had to go through each value in whatever I was iterating over.  The actual for loop in Ruby wasn't that much better.  Granted, you can start and end where you want to (0 to 5) but you still can't control the iterative step.
+    </p>
+    <pre class="ruby code">
+    for i in 0..5
+        #Go through each item (in this case a series of numbers)
+    end
+    </pre>
+    <p>
+      And the aforementioned each loop...
+    </p>
+    <pre class="ruby code">
+    array.each do |i|
+      #do something to each and every item in the array
+    end
+    </pre>
+    <p>
+      So if you wanted to control the iterative step (or even just have some sort of counter), you have to declare a count variable, do it as a while loop, and count everytime it runs, and provide a stop gap for the loop.  <em>Sigh</em>.
+    <pre class="ruby code">
+    count = 0
+    while count < some.length
+        #do something
+        count += 1
+    end
+    </pre>
+    </p>
+    <p>
+        So I consulted the facebook hive mind of computer science whizes that are my friends (#soSiliconValley?), and learned a few interesting things.  
+    </p>
+    <p>
+        First of all, the for loop in Javascript is just another way to write a while loop - from a mathematical standpoint, they will continue to iterate until a condition evaluates to not true.  Whereas the for in loop in Ruby is just "syntactical sugar on top of the <span class="code">.each</span> method than an object has.  So when you do <span class="code">for n in 1..5</span>, the object created by <span class="code">1..5</span> is a range, and the range has an <span class="code">.each</span> method.  Usually I do <span class="code">(1..5).each {|i| #code}</span> so that it's more explicit, but I think the variables have different scoping rules." -Isaac Yonemato.  
+    </p>
+    <p>
+        Okay, now that I had a self pity party regarding my mourning of JS for loops in Ruby, I do have to say that while at first, the amount of different kinds of Ruby loops available (<span class="code">until</span>, <span class="code">do while</span>, <span class="code">unless</span>, etc) have proven to be extremely useful.  
+    </p>
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+  </div><!--blog post close-->
+</main>
+</div><!-- page wrap close -->
