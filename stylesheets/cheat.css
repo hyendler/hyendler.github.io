@@ -1,0 +1,28 @@
+.column {
+	width: 40%;
+}
+
+.column-left {
+	padding-right: 5%;
+	float: left;
+}
+
+.column-right {
+	padding-left: 5%;
+	float: left;
+}
+
+h4 {
+	text-align: center;
+}
+
+
+pre {
+    tab-size: 4;
+    -moz-tab-size: 4;
+    -o-tab-size:  4;
+}
+
+.row {
+	margin-top: 50px;
+}

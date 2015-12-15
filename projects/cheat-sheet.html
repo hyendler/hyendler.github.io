@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hanah Yendler</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/cheat.css">
+</head>
+<body>
+
+<div class="container">
+	<h2>Functions</h2>
+	<p>Keeping my head straight around how to use functions as well as flow in the code is a bit of task, as such I figured I would reiterate how to declare functions in both Javascript and Ruby.  Well, mainly in Javascript.
+	<div class="row clearfix">
+		<div class="column column-left">
+			<h4>Ruby</h4>
+			<p>Defining a method in Ruby</p>
+<pre class="ruby">
+def a_method
+	# do something
+	return something
+end
+
+yayz = a_method
+</pre>
+			<p>Boom. Done.  And the last line calls the method and assigns it to a variable.</p>
+			<pre>
+			</pre>
+		</div>
+		<div class="column column-right">
+			<h4>Javascript</h4>
+			<p>Defining a function in JS, as a function declaration</p>
+<pre class="javascript">
+function aDeclaredFunction {
+	//do something
+	return something;
+}
+
+var yayz = aDeclaredFunction;
+</pre>
+			<p>Okay...easy, right?  Hold tight...</p>
+<pre class="javascript">
+var aFunctionExpression = function { 
+	//do something
+	return something;
+ }
+var yayz = aFunctionExpression
+</pre>
+			<p>
+			Say what?  Well, it's called a function expression.  It allows you to assign an anonymous function to a variable, and that function gets called whenever that variable is used.  (You can also name a function expression, but that's less common.)
+			</p>
+			<p>And this is where the fun part starts.  If you use a function declaration (first example), it means that the function is moved to the top of the metaphysical code flow.  As such, you can call a function before you declare it.
+			</p>
+<pre class="javascript">
+var yayz = aDeclaredFunction;
+
+function aDeclaredFunction {
+	//do something
+	return something;
+}
+</pre>
+			<p>
+			And the last way to make a function in JS is to use a function constructor.  Since functions are objects in JS, they have a constructor.
+			</p>
+<pre class="javascript">
+var aConstructedFunction = new Function() {
+	// do something
+	return something
+}
+
+var yayz = aConstructedFunction;
+</pre>
+
+			<p>
+			I said that this example was the last way to declare a function in JS...well, there is one more way, except things get all kind of weird because you can both express the function and the immediately invoke it.
+			</p>
+<pre class="javascript">
+(function() {
+	// do something
+	return something
+})();
+</pre>
+			<p>
+			Woah.
+			</p>
+		</div><!--col close-->
+	</div><!--row close-->
+	<div class="row clearfix">
+		<p>Some fun facts about functions for you...</p>
+		<div class="column column-left">
+			<h4>Ruby</h4>
+			<ul>
+				<li>Ruby does NOT have nested methods. (<a href="http://stackoverflow.com/a/4865161">More explanation</a>)</li>
+				<li>Functions are normally referred to as methods, period. (Well, actually, <a href="http://stackoverflow.com/questions/928443/ruby-functions-vs-methods">most argue</a> that there aren't even functions in Ruby, as functions are objectless methods, and Ruby is a completely OO language).</li>
+				<li>Ruby has <a href="http://www.sitepoint.com/closures-ruby/">closures</a>!  But they are weird, too</li>
+				<li>Ruby has these interesting things called <a href="http://awaxman11.github.io/blog/2013/08/05/what-is-the-difference-between-a-block/">Procs and lambdas</a> that can help you create a <a href="http://stackoverflow.com/questions/4268227/ruby-equivalent-to-a-javascript-self-executing-function">self invoking block of code</a>. 
+			</ul>
+		</div>
+		<div class="column column-right">
+			<h4>Javascript</h4>
+			<ul>
+				<li>Javascript totally has nested methods, yippee!</li>
+				<li>A method is a function inside of an object.</li>
+				<li>Variable scoping is super important in Javascript, and self invoking functions have a fun thing called <a href="http://www.w3schools.com/js/js_function_closures.asp">closures</a>.</li>
+			</ul>
+
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
