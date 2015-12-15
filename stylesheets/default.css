@@ -161,10 +161,12 @@ pre.javascript, pre.ruby {
 
 pre.ruby {
     background-color: #f1f1f3;
+    color: purple;
 }
 
 pre.javascript {
 	background-color: #dff4fc;
+	color: #123456;
 }
 
 
@@ -190,8 +192,7 @@ pre .expr { color: #227; }
 pre .escape { color: #277; }
 pre .answer {color: purple;}
 
-pre.code {color: purple;}
-p .code {color: purple;}
+
 
 
 
