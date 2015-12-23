@@ -35,3 +35,8 @@ a:hover {
 	color: grey;
 	font-style: italic;
 }
+
+.emphasis {
+	font-weight: 600;
+	
+}
