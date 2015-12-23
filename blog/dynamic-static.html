@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+  <title>Hanah's Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<div class="container">
+
+<main>
+<div class="blog-post">
+  <h2>Dynamically Static (or the other way around?)</h2>
+  <h4>Dynamic vs. Static typed languages</h4>
+  <h5>12/22/15</h5>
+
+  <section>
+    <p>
+     As per usual, given any concept to research in the computer science world leads down the tangled Alice-In-Wonderland type rabbit hole.  First thing: when researching dynamic vs. static typed languages, pops up the concepts of compilers, interpreters, variable interpretation at run time vs. compile time, and scripting languages.  <em>Huh</em>?
+    </p>
+    <p>
+      So, to start with a few concepts and vocabulary:
+    </p>
+    <ul>
+      <li><span class="emphasis">Compiler</span>: a computer program that takes code and alchemicalizes it into a different language.  Now, why would this ever happen?  Seems like a lot more work.  According to <a href="https://en.wikipedia.org/wiki/Compiler">Wikipedia</a>, normally compilers "translate source code from a high-level programming language to a lower level language (e.g., assembly language or machine code)".  Compilers have a long history within the development of computer science.</li>
+      <li><span class="emphasis">Compiled language</span>: a coding language that requires a compiler.  So to have it run, it needs to be compiled first. Examples: Java, C, C++</li>
+      <li><span class="emphasis">Machine code</span>:  the language that a compiled code gets transformed to.</li>
+    </ul>
+      <p>Java looks something like this:</p>
+<pre class="javascript">
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello World !");
+  }
+}
+</pre>
+      <p>And when compiled, looks something like this (except 200 lines of it)</p>
+<pre class="javascript">
+0x0000000107ee6384: mov    %eax,%r9d
+0x0000000107ee6387: shl    $0x5,%r9d
+0x0000000107ee638b: sub    %eax,%r9d
+0x0000000107ee638e: movslq %r10d,%r10
+0x0000000107ee6391: movzwl 0x12(%rdi,%r10,2),%r8d
+0x0000000107ee6397: movzwl 0x16(%rdi,%r10,2),%ebp
+</pre>
+      <p>Code from <a href="http://www.ashishpaliwal.com/blog/2013/05/jvm-how-to-see-assembly-code-for-your-java-program/">here</a></p>
+    <ul>
+      <li><span class="emphasis">Interpreter</span>: a computer program that runs the code right then and there, with no compilation.  (However, some light code translation might happen right as the code is being executed.</li>
+      <li><span class="emphasis">Interpreted language</span>: a language that can be executed right away.  Examples: Ruby, Javascript, Python</li>
+      <li><span class="emphasis">Scripting languages</span>: a scripting language is a type of interpreted language (from what I could gather).  For extra interesting morsels, scripts are a list of executable series of instructions, and scripting languages serve the purpose of mediating between programs.</li>  
+    </ul>
+    <p>
+    So now on to the actual definitions of the topic of this week, dynamic and static:
+    </p>
+    <ul>
+      <li><span class="emphasis">Static-typed language</span>: When a language is compiled, the variable type is explicity declared.</li>
+      <li><span class="emphasis">Variable type</span>: In static-typed languages such as Java, there are two different variable types: primitive and object/reference.  Primitive types, for example, are categorized as integer or float or string, etc.  But here is the catch: the program does not know which type of variable you are giving it, so you must explicitly declare it, like this:</li>
+<pre class="javascript">
+int number = 100;
+String word = "hell yeah";
+</pre>
+      <li>Dynamic-typed language: The variable is interpreted at execution, not during compiliation.  As a result, the languages do not require variable type declaration, such as in Ruby:</li>
+<pre class="ruby">
+number = 100
+word = "hell yeah"
+</pre>
+    </ul>
+    <p>
+    But why is this a big enough deal in the first place?  Well, static-typed languages are more performance efficient, but dynamic-typed languages are easier to write from a coder's perspective, because you don't have to track the variable type.  However, that does mean that things can execute in a dynamic language that wouldn't normally execute under a static language, leading to errors during runtime.  As far as a more in-depth discussion of the actual pros and cons of each, as a Stack Overflower <a href="http://stackoverflow.com/q/125367">stated</a> so on point: "This question is too subjective".  
+    </p>
+    <p>
+    Sources
+    </p>
+    <ul>
+      <li><a href="http://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages">http://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages</a></li>
+      <li><a href="http://stackoverflow.com/questions/125367/dynamic-type-languages-versus-static-type-languages">http://stackoverflow.com/questions/125367/dynamic-type-languages-versus-static-type-languages</a></li>
+      <li><a href="http://blog.jooq.org/2014/12/11/the-inconvenient-truth-about-dynamic-vs-static-typing">http://blog.jooq.org/2014/12/11/the-inconvenient-truth-about-dynamic-vs-static-typing</a></li>
+      <li><a href="http://www.tutorialspoint.com/java/java_basic_datatypes.htm">http://www.tutorialspoint.com/java/java_basic_datatypes.htm</a></li>
+    </ul>
+  </section>
+  </div><!--blog post close-->
+</main>
+</div><!-- page wrap close -->
